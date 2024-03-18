@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動的な名前入力フォームとひらがな並び替え</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>すきな文字並び替えアプリ</header>
+    <div class="container">
+    <label for="nameCountInput">入力フォームの数:</label>
+    <input type="number" id="nameCountInput" placeholder="数を入力" min="1" max="10">
+    <button onclick="addNameInputs()">入力フォームを追加</button>
+
+    <div id="nameInputsContainer"></div> <!-- 名前の入力フォームを追加するコンテナ -->
+    <button onclick="displayHiragana()">ひらがな表示</button> 
+
+    <input type="number" id="wordLengthInput" placeholder="枠の数を入力" min="1" max="10">
+    <button onclick="createWordSlots()">枠を作成</button>
+    <button onclick="fillSlotsRandomly()">ひらがなをランダムに埋める</button>
+    <button onclick="clearInputs()">クリア</button>
+
+    <div id="wordSlotsContainer"></div> <!-- 単語を完成させる枠のコンテナ -->
+    <div id="hiraganaContainer"></div> <!-- ひらがな文字を表示するコンテナ -->
+    </div>
+
+    <footer>© 2024 ひらがなアプリ. All rights reserved.</footer>
+    <script src="/static/script.js"></script>
+</body>
+</html>

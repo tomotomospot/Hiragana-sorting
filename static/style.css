@@ -1,0 +1,96 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+.container {
+    padding: 20px;
+    max-width: 800px; /* 最大幅を800pxに設定 */
+    margin: 0 auto; /* 中央揃え */
+    flex-grow: 1;
+}
+
+.nameInput, .hiraganaInput, #nameCountInput, #wordLengthInput {
+    width: calc(100% - 20px); /* パディングを考慮して幅を調整 */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.wordSlot, #hiraganaContainer span {
+    cursor: grab;
+    border-radius: 5px;
+}
+
+.wordSlot {
+    width: 60px; /* 枠の幅を調整 */
+    height: 60px; /* 枠の高さを調整 */
+    border: 2px dashed #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+#wordSlotsContainer, #hiraganaContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#hiraganaContainer {
+    padding: 10px 0; /* ひらがな表示領域に上下の余白を追加 */
+}
+
+span.used {
+    color: #808080;
+    pointer-events: none;
+}
+
+span.selected {
+    background-color: blue;
+    color: white;
+}
+
+#hiraganaContainer span {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    margin-bottom: 10px; /* ひらがな文字間の余白を追加 */
+}
